@@ -13,9 +13,9 @@ export const Router = () => {
             <Route index element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="*" element={<Notfound />} />
           </Route>
         </Route>
+        <Route path="*" element={<Notfound />} />
       </Routes>
     </>
   );
@@ -57,7 +57,9 @@ const Contact = () => {
 const Notfound = () => {
   return (
     <>
+    <Layout/>
       <h1>404 Not found</h1>
+
     </>
   );
 };
