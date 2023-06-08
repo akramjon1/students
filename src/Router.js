@@ -2,27 +2,26 @@ import React from "react";
 import { NavLink, Link, Routes, Route } from "react-router-dom";
 import { Login } from "./Page/Auth/Login";
 import { Auth } from "./Page/Auth/Auth";
+import { Layout } from "./Page/Layout/Layout";
 export const Router = () => {
   return (
     <>
-      <Login />
-
-      <Auth path="/">
-      <Navbar />
-
-        <Routes>
-          <Route index element={<Home />} />
-          <Route path="about" element={<About />} />
-          <Route path="contact" element={<Contact />} />
-          <Route path="*" element={<Notfound />} />
-        </Routes>
-      </Auth>
-
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route element={<Auth />}>
+          <Route element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="*" element={<Notfound />} />
+          </Route>
+        </Route>
+      </Routes>
     </>
   );
 };
 
-const Navbar = () => {
+export const Navbar = () => {
   return (
     <nav>
       <NavLink to="/">Home</NavLink>
