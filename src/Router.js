@@ -3,6 +3,9 @@ import { NavLink, Link, Routes, Route } from "react-router-dom";
 import { Login } from "./Page/Auth/Login";
 import { Auth } from "./Page/Auth/Auth";
 import { Layout } from "./Page/Layout/Layout";
+import { AddStudent } from "./Page/AddStudent/AddStudent";
+import { GetStudent } from "./Page/GetStudent/GetStudent";
+import { NotFound } from "./Page/NotFound/NotFound";
 export const Router = () => {
   return (
     <>
@@ -11,11 +14,12 @@ export const Router = () => {
         <Route element={<Auth />}>
           <Route element={<Layout />}>
             <Route index element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
+            <Route path="/add/student" element={<AddStudent />} />
+            <Route path="/get/student" element={<GetStudent />} />
+            <Route path="*" element={<NotFound />} />
+
           </Route>
         </Route>
-        <Route path="*" element={<Notfound />} />
       </Routes>
     </>
   );
@@ -35,31 +39,6 @@ const Home = () => {
   return (
     <>
       <h1> Home</h1>
-    </>
-  );
-};
-const About = () => {
-  return (
-    <>
-      <h1>About</h1>
-    </>
-  );
-};
-
-const Contact = () => {
-  return (
-    <>
-      <h1>Contact</h1>
-    </>
-  );
-};
-
-const Notfound = () => {
-  return (
-    <>
-    <Layout/>
-      <h1>404 Not found</h1>
-
     </>
   );
 };

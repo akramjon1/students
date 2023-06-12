@@ -4,6 +4,7 @@ import { useSnackbar } from "notistack";
 import { useNavigate } from "react-router-dom";
 import { acLogin } from "../../Redux/Auth";
 import { useDispatch } from "react-redux";
+import {v4 as uuidv5} from "uuid";
 
 export const Login = () => {
   const { enqueueSnackbar } = useSnackbar();
@@ -17,7 +18,9 @@ export const Login = () => {
 
     if (username === "admin" && password === "admin") {
       const msg = "You are already authenticated";
+      const token = uuidv5();
       enqueueSnackbar(msg, { variant: "success" });
+      localStorage.setItem("token", token)
       dispatch(acLogin());
       navigate("/");
       

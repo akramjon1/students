@@ -1,13 +1,13 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import { Navbar } from "../../Router";
-
+import { Aside } from "../../Components/Aside/Aside";
+import "./Layout.css";
 export const Layout = () => {
   return (
     <main className="layout">
-      <header className="header">
-        <Navbar />
-      </header>
+      <aside className="aside">
+        <Aside/>
+      </aside>
       <section className="content">
         <Outlet />
       </section>

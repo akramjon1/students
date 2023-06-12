@@ -1,4 +1,5 @@
-export const reAuth = (state = false, action) => {
+const token = localStorage.getItem("token") || null;
+export const reAuth = (state = token, action) => {
   switch (action.type) {
     case "Login":
       return true;
