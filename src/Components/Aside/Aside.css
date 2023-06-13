@@ -1,24 +1,41 @@
-.aside_items{
-    min-width: 300px;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    background: lightskyblue;
-    height: 100%;
-    position: sticky;
-    top: 0;
-    left: 0;
-    padding: 10%;
+@import url(https://fonts.googleapis.com/css?family=Rubik:300,regular,500,600,700,800,900,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+.aside_items {
+  min-width: 290px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: #333333;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  padding: 25px;
+  overflow-y: auto;
 }
-.aside_items a{
-    font-size: 16px;
-    color: white;
-    font-weight: 600;
-    text-decoration: none;
-    outline: none;
-    border: 1px solid transparent;
-    padding: 8px;
+.aside_items a {
+  color: white;
+  text-decoration: none;
+  outline: none;
+  font-family: "Rubik";
+  font-weight: 400;
+  font-size: 20px;
+  padding: 10px;
+  letter-spacing: 0.01em;
+  position: relative;
 }
-.aside_items .active{
-    border: 1px solid;
+.aside_items a::before{
+  content: "";
+  width: 0;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: red;
+  transition: 0.3s ease-out;
+}
+.aside_items a:first-child::before{
+  display: none;
+}
+.aside_items .active::before{
+  width: 100%;
 }

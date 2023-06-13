@@ -3,9 +3,13 @@ import { NavLink, Link, Routes, Route } from "react-router-dom";
 import { Login } from "./Page/Auth/Login";
 import { Auth } from "./Page/Auth/Auth";
 import { Layout } from "./Page/Layout/Layout";
-import { AddStudent } from "./Page/AddStudent/AddStudent";
-import { GetStudent } from "./Page/GetStudent/GetStudent";
+import { Messages } from "./Page/Messages/Messages";
+import { Contact } from "./Page/Contact/Contact";
 import { NotFound } from "./Page/NotFound/NotFound";
+import { Teachers } from "./Page/Teachers/Tachers";
+import { Video } from "./Page/Video/Video";
+import { Subject } from "./Page/Subject/Subject";
+import {GiHamburgerMenu} from "react-icons/gi"
 export const Router = () => {
   return (
     <>
@@ -14,8 +18,14 @@ export const Router = () => {
         <Route element={<Auth />}>
           <Route element={<Layout />}>
             <Route index element={<Home />} />
-            <Route path="/add/student" element={<AddStudent />} />
-            <Route path="/get/student" element={<GetStudent />} />
+            <Route path="/messages" element={<Messages />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/teachers" element={<Teachers />} />
+            <Route path="/video" element={<Video />} />
+            <Route path="/subject" element={<Subject />} />
+            
+
+
             <Route path="*" element={<NotFound />} />
 
           </Route>
@@ -38,7 +48,7 @@ export const Navbar = () => {
 const Home = () => {
   return (
     <>
-      <h1> Home</h1>
+       <span><GiHamburgerMenu/></span>
     </>
   );
 };
