@@ -8,8 +8,9 @@
   height: 100%;
   position: fixed;
   top: 0;
-  left: -100%;
+  left: 0;
   padding: 25px;
+  z-index: 999;
   overflow-y: auto;
 }
 .aside_items a {
@@ -30,7 +31,7 @@
   position: absolute;
   left: 0;
   bottom: 0;
-  background: red;
+  background: yellow;
   transition: 0.3s ease-out;
 }
 .aside_items a:first-child::before{

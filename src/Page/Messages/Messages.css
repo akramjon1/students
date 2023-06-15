@@ -1,0 +1,32 @@
+.messages_main{
+    max-width: 80%;
+    border: 2px solid rgba(129, 129, 10, 0.699);
+    width: 100%;
+    margin: 0 auto;
+margin-top: 90px;
+    border-radius: 20px;
+    padding: 2%;
+ 
+}
+.messages_wrapper{
+    margin-bottom: 20px;
+    border-bottom: 1px solid #000;
+    padding-bottom: 10px;
+}
+
+.messages_box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.messages_box button{
+    padding: 5px 15px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 5px;
+    background: #56075edc;
+    color: white;
+
+}

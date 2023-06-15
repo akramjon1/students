@@ -9,7 +9,7 @@ import { NotFound } from "./Page/NotFound/NotFound";
 import { Teachers } from "./Page/Teachers/Tachers";
 import { Video } from "./Page/Video/Video";
 import { Subject } from "./Page/Subject/Subject";
-import {GiHamburgerMenu} from "react-icons/gi"
+import { Home } from "./Page/Home/Home";
 export const Router = () => {
   return (
     <>
@@ -45,10 +45,4 @@ export const Navbar = () => {
   );
 };
 
-const Home = () => {
-  return (
-    <>
-       <span><GiHamburgerMenu/></span>
-    </>
-  );
-};
+

@@ -1,0 +1,22 @@
+.teachers_main{
+    max-width: 80%;
+    width: 100%;
+    margin: 0 auto;
+margin-top: 90px;
+    border-radius: 20px;
+  background: #000;
+ 
+}
+.teachers_wrapper{
+ display: flex;
+ flex-direction: row;
+}
+.teachers_box{
+    display: flex;
+    flex-direction: column;
+    max-width: 30%;
+    width: 100%;
+}
+.teachers_box img{
+    width: 100%;
+}
